@@ -19,9 +19,7 @@
 
 // Start these at the USER code range in VIA
 enum my_keycodes {
-  ENC_PRESS = 0x5F80,
-  CLOCK_SET,
-  //OLED_TOGG
+  ENC_PRS = 0x5F80,	//ENC_PRESS
 };
 
 enum encoder_modes {
@@ -29,7 +27,6 @@ enum encoder_modes {
   ENC_MODE_MEDIA,
   ENC_MODE_SCROLL,
   ENC_MODE_BRIGHTNESS,
-  ENC_MODE_BACKLIGHT,
   ENC_MODE_CUSTOM0,
   ENC_MODE_CUSTOM1,
   ENC_MODE_CUSTOM2,

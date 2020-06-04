@@ -42,7 +42,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
       }
       return false;
 #endif
-    case ENC_PRESS:
+    case ENC_PRS:
       if (record->event.pressed) {
         uint16_t mapped_code = handle_encoder_press();
         uint16_t held_keycode_timer = timer_read();
