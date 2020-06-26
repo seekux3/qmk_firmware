@@ -1,5 +1,4 @@
 #include "preonic.h"
-#include "timer.h"
 
 const uint8_t music_map[MATRIX_ROWS][MATRIX_COLS] = LAYOUT_preonic_grid(
   48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59,
@@ -17,7 +16,6 @@ uint8_t previous_encoder_mode = 0;
 uint8_t layer;
 
 bool queue_for_send = false;
-bool clock_set_mode = false;
 
 /* Artificial delay added to get media keys to work in the encoder*/
 #define MEDIA_KEY_DELAY 10
@@ -32,16 +30,6 @@ uint32_t layer_state_set_kb(uint32_t state) {
 bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
   queue_for_send = true;
   switch (keycode) {
-#if 0 // No OLED
-    case OLED_TOGG:
-      if(!clock_set_mode){
-        if (record->event.pressed) {
-          oled_mode = (oled_mode + 1) % _NUM_OLED_MODES;
-          draw_ui();
-        }
-      }
-      return false;
-#endif
     case ENC_PRS:
       if (record->event.pressed) {
         uint16_t mapped_code = handle_encoder_press();

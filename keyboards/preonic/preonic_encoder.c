@@ -1,6 +1,8 @@
 #include "preonic.h"
 #include "tmk_core/common/eeprom.h"
 
+float music_enc_mode[][2] = SONG(PLOVER_SOUND);
+
 void pre_encoder_mode_change(){
   // Do nothing
 }
@@ -11,6 +13,7 @@ void post_encoder_mode_change(){
 
 void change_encoder_mode(bool negative){
   pre_encoder_mode_change();
+  uint8_t old_enc_mode = encoder_mode;
   if(enabled_encoder_modes == 0){
     enabled_encoder_modes = 0x1F;
   }
@@ -25,6 +28,8 @@ void change_encoder_mode(bool negative){
         encoder_mode = (encoder_mode + 1) % _NUM_ENCODER_MODES;
     }
   } while(((1 << encoder_mode) & enabled_encoder_modes) == 0);
+  if (old_enc_mode != encoder_mode)
+    PLAY_SONG(music_enc_mode);
   post_encoder_mode_change();
 }
 
