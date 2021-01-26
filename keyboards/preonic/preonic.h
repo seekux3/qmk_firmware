@@ -58,4 +58,4 @@ void set_custom_encoder_config(uint8_t encoder_idx, uint8_t behavior, uint16_t n
 **                                               **
 **      Name of Alias     Matrix Name:           **
 ******* ----------------- ------------------- ****/
-#define LAYOUT_ortho_5x12 LAYOUT_preonic_grid
+#define LAYOUT_preonic_grid LAYOUT_ortho_5x12
