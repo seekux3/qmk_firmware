@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Qwerty
  * ,-----------------------------------------------------------------------------------.
- * | ENC  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * | GEsc |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -49,20 +49,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | GEsc | Haen | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
+ * | Enc  | Haen | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_QWERTY] = LAYOUT_preonic_grid( \
-  ENC_PRS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_GESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_DEL,  \
   KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, \
   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,  \
-  KC_GESC, KC_HAEN, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+  ENC_PRS, KC_HAEN, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 /* Colemak
  * ,-----------------------------------------------------------------------------------.
- * | ENC  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * | GEsc |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Tab  |   Q  |   W  |   F  |   P  |   G  |   J  |   L  |   U  |   Y  |   ;  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -70,20 +70,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   Z  |   X  |   C  |   V  |   B  |   K  |   M  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | GEsc | Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
+ * | ENC  | Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_COLEMAK] = LAYOUT_preonic_grid( \
-  ENC_PRS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_GESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
   KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_DEL,  \
   KC_LCTL, KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT, \
   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_K,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,  \
-  KC_GESC, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+  ENC_PRS, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 /* Dvorak
  * ,-----------------------------------------------------------------------------------.
- * | ENC  |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
+ * | GEsc |   1  |   2  |   3  |   4  |   5  |   6  |   7  |   8  |   9  |   0  | Bksp |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Tab  |   "  |   ,  |   .  |   P  |   Y  |   F  |   G  |   C  |   R  |   L  | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
@@ -91,15 +91,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   ;  |   Q  |   J  |   K  |   X  |   B  |   M  |   W  |   V  |   Z  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * | GEsc | Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
+ * | ENC  | Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
 [_DVORAK] = LAYOUT_preonic_grid( \
-  ENC_PRS, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
+  KC_GESC, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC, \
   KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_DEL,  \
   KC_LCTL, KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_SLSH, \
   KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,    KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_ENT,  \
-  KC_GESC, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
+  ENC_PRS, KC_LCTL, KC_LALT, KC_LGUI, LOWER,   KC_SPC,  KC_SPC,  RAISE,   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT  \
 ),
 
 /* Lower
@@ -169,8 +169,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  static bool haen_mods = false;
-  static bool lshift_pressed = false;
   switch (keycode) {
         case QWERTY:
           if (record->event.pressed) {
@@ -227,110 +225,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           return false;
           break;
-#if 0
-        // SHIFT+ESC키에 '~' 대체
-        case KC_ESC:
-          // 키보드가 눌렸을 경우
-          if (record->event.pressed)
-          {
-            // 왼쪽 SHIFT키와 오른쪽 SHIFT키가 눌렸는지 확인
-            if (get_mods() & MOD_MASK_SHIFT)
-            {
-              // SHIFT+ESC를 '~'키로 정의를 한다.
-              register_code16(KC_TILD);
-            }
-            else
-            {
-              // ESC만 눌린 경우 ESC키로 정의한다.
-              register_code(KC_ESC);
-            }
-          }
-          // 키보드가 눌리지 않았을 경우 등록된 코드를 풀어준다.
-          else {
-            if (get_mods() & MOD_MASK_SHIFT)
-            {
-              unregister_code16(KC_TILD);
-            } else {
-              unregister_code(KC_ESC);
-            }
-          }
-          return false; // 발생한 키 처리를 했으니 false 처리를 하여 중복으로 넘겨주지 않도록 한다.
-#endif
-        case KC_SPC:
-          if (record->event.pressed)
-          {
-            if (get_mods() & MOD_MASK_SHIFT)
-            {
-              // SHIFT+SPACE을 한영키로 치환하는 것이기 때문에 SHIFT+SPACE가 되지 않게 SHIFT를 빼준다.
-              if( get_mods() & MOD_BIT(KC_LSHIFT) )
-                unregister_code(KC_LSHIFT);
-
-              if( get_mods() & MOD_BIT(KC_RSHIFT) )
-                unregister_code(KC_RSHIFT);
-
-              register_code(KC_HAEN);
-              haen_mods = true;
-            } else {
-              register_code(KC_SPC);
-            }
-          }
-          else
-          {
-            if (haen_mods == true)
-            {
-              unregister_code(KC_HAEN);
-              register_code(KC_LSHIFT);
-              haen_mods = false;
-            } else {
-              unregister_code(KC_SPC);
-            }
-          }
-          return false;
-
-        case KC_LSHIFT:
-          if (record->event.pressed)
-          {
-            lshift_pressed = true;
-          } else {
-            lshift_pressed = false;
-          }
-          break;
-
-#if 0
-        // SHIFT+DEL키에 INSERT키 대입
-        case KC_DEL:
-          // 키보드가 눌렸을 경우
-          if (record->event.pressed)
-          {
-            // 왼쪽 SHIFT키와 오른쪽 SHIFT키가 눌렸는지 확인
-            if (get_mods() & MOD_MASK_SHIFT)
-            {
-              // SHIFT+DEL을 INSERT키로 치환하는 것이기 때문에 SHIFT+INSERT가 되지 않게 SHIFT를 빼준다.
-              if( get_mods() & MOD_BIT(KC_LSHIFT) )
-                unregister_code(KC_LSHIFT); // Left SHIFT키가 눌렸을 경우 해제한다.
-
-              if( get_mods() & MOD_BIT(KC_RSHIFT) )
-                unregister_code(KC_RSHIFT); // Right SHIFT키가 눌렸을 경우 해제한다.
-
-              // SHIFT+DEL를 INSERT키로 정의를 한다.
-              register_code(KC_INS);
-            } else {
-            // DEL만 눌린 경우 DEL키로 정의한다.
-            register_code(KC_DEL);
-            }
-          }
-          // 키보드가 눌리지 않았을 경우 등록된 코드를 풀어준다.
-          else
-          {
-            if (get_mods() & MOD_MASK_SHIFT)
-            {
-              unregister_code(KC_INS);
-            } else {
-              unregister_code(KC_DEL);
-            }
-          }
-          return false; // 발생한 키 처리를 했으니 false 처리를 하여 중복으로 넘겨주지 않도록 한다.
-#endif
   
         default:
           return true; // Process all other keycodes normally
